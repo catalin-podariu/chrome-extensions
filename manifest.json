@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Big Text Grabber",
+  "version": "1.0",
+  "description": "A Chrome extension to copy text from paused YouTube videos. Instruction in the extension options page.",
+  "permissions": ["activeTab"],
+  "icons": {
+    "128": "logo.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["tesseract.min.js", "content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "author": {
+      "name": "Catalin Podariu",
+      "email": "catalin.podariu@gmail.com"
+    }
+}
